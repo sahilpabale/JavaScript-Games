@@ -99,3 +99,59 @@ function rpsFrontEnd(humanImgChoice, botImgChoice, finalMSG) {
     document.getElementById('flex-box-rps-div').appendChild(msg);
     document.getElementById('flex-box-rps-div').appendChild(botDiv);
 }
+
+// Challenge 4: Change color of all buttons!
+
+var allBtns = document.getElementsByTagName('button');  // will return an array of all buttons
+var resetBtns = [];
+for (let i=0; i<allBtns.length; i++){
+    resetBtns.push(allBtns[i].classList[1]);
+}
+// var resetBtns = [...allBtns];       // cloning allBtns to resetBtns i.e, copying one array to another
+console.log(resetBtns);
+// resetBtns[index].classList.remove('className'); // it will remove the className from the lists of class in resetBtns[index]
+
+function btnColorChange(btnState) {
+    if (btnState.value === 'red') {
+        btnRed();
+    }else if(btnState.value === 'green') {
+        btnGreen();
+    } else if(btnState.value === 'reset') {
+        btnReset();
+    } else if(btnState.value === 'random') {
+        btnRandom();
+    }
+}
+
+function btnRed() {
+    for(let i=0; i<allBtns.length; i++) {
+        allBtns[i].classList.remove(allBtns[i].classList[1]);
+        allBtns[i].classList.add('btn-danger');
+    }
+}
+
+function btnGreen() {
+    for(let i=0; i<allBtns.length; i++) {
+        allBtns[i].classList.remove(allBtns[i].classList[1]);
+        allBtns[i].classList.add('btn-success');
+    }
+}
+
+function btnReset() {
+    
+    for(let i=0; i<allBtns.length; i++) {
+        allBtns[i].classList.remove(allBtns[i].classList[1]);
+        allBtns[i].classList.add(resetBtns[i]);
+        
+    }
+}
+
+function btnRandom() {
+    let choices = ['btn-primary', 'btn-danger', 'btn-success', 'btn-warning'];
+    
+    for (i=0; i<allBtns.length; i++) {
+        let randChNum = Math.floor(Math.random() * 4);
+        allBtns[i].classList.remove(allBtns[i].classList[1]);
+        allBtns[i].classList.add(choices[randChNum]);
+    }
+}
