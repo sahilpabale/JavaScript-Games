@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAVACSRIPT CHALLENGES</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- CHALLENGE 1 LAYOUT - Age in Days -->
+    <div class="container-1">
+        <h2>Challenge 1: Age in Days</h2>
+        <div class="flex-box-container-1">
+            <div>
+                <button class="btn btn-primary" onclick="ageInDays()">Click Me</button>
+            </div>
+            <div>
+                <button class="btn btn-danger" onclick="reset()">Reset</button>
+            </div>
+        </div>
+        <div class="flex-box-container-1">
+            <div class="flex-box-result">
+                <h3 id="result"></h3>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- CHALLENGE 2 LAYOUT - Cat Generator -->
+    <div class="container-2">
+        <h2>Challenge 2: Cat Generator</h2>
+        <div class="flex-box-container-2">
+            <button class="btn btn-success gen-btn" id="cat-gen-btn" onclick="generateCat()">Generate Cat</button>
+        </div>
+        <div class="flex-box-container-2" id="flex-cat-gen">
+            <!-- <img src="https://api.thecatapi.com/api/images/get?format=src&type=gif&size=small" alt="My Cat"> -->
+        </div>
+    </div>
+
+
+    <!-- CHALLENGE 3 LAYOUT - Rock, Paper, Scissors -->
+    <div class="container-3">
+        <div class="flex-box-container-2">
+            <h2>Challenge 3: Rock, Paper, Scissors</h2>
+            <button class="btn btn-danger" onclick="location.reload()">Reset</button>
+        </div>
+        <div class="flex-box-rps" id="flex-box-rps-div">
+            <img src="static/img/rock.png" alt="rock" id="rock" height="250px" onclick="rpsGame(this)">
+            <img src="static/img/paper.png" alt="paper" id="paper" height="250px" onclick="rpsGame(this)">
+            <img src="static/img/scissor.png" alt="scissor" id="scissor" height="250px" onclick="rpsGame(this)">
+        </div>
+    </div>
+
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    -->
+    <script src="static/js/script.js"></script>
+</body>
+</html>
